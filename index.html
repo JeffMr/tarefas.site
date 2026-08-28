@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Tarefas.site - Transforme seu tempo em recompensas</title>
+    <meta name="title" content="Tarefas.site - Transforme seu tempo em recompensas" />
+    <meta name="description" content="Plataforma de produtividade e recompensas. Organize suas tarefas, interaja com a comunidade e ganhe bônus enquanto alcança seus objetivos diários." />
+    <meta name="keywords" content="tarefas, produtividade, recompensas, ganhar dinheiro online, organização, metas, comunidade" />
+    <meta name="author" content="Tarefas.site" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tarefas.site/" />
+    <meta property="og:title" content="Tarefas.site - Transforme seu tempo em recompensas" />
+    <meta property="og:description" content="Organize suas tarefas, interaja com a comunidade e ganhe recompensas reais concluindo metas diárias." />
+    <!-- Placeholder for an actual image, e.g., /og-image.png -->
+    <meta property="og:image" content="https://tarefas.site/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tarefas.site/" />
+    <meta property="twitter:title" content="Tarefas.site - Transforme seu tempo em recompensas" />
+    <meta property="twitter:description" content="Organize suas tarefas, interaja com a comunidade e ganhe recompensas reais concluindo metas diárias." />
+    <meta property="twitter:image" content="https://tarefas.site/og-image.png" />
+
+    <!-- GitHub Pages Single Page App Redirect Receiver (URLs Limpas via sessionStorage) -->
+    <script type="text/javascript">
+      (function(l) {
+        try {
+          var pathSegments = l.pathname.split('/').filter(Boolean);
+          var storageKey = 'ghpages_redirect_root';
+          if (pathSegments.length > 0) {
+            storageKey = 'ghpages_redirect_' + pathSegments[0];
+          }
+          var redirectDataStr = sessionStorage.getItem(storageKey);
+          if (redirectDataStr) {
+            sessionStorage.removeItem(storageKey);
+            var data = JSON.parse(redirectDataStr);
+            if (data && data.path) {
+              var basePath = l.pathname.endsWith('/') ? l.pathname.slice(0, -1) : l.pathname;
+              window.history.replaceState(null, null, basePath + data.path + data.search + data.hash);
+            }
+          }
+        } catch (e) {}
+      }(window.location))
+    </script>
+    <!-- Mercado Pago SDK V2 (Carregado com defer para não bloquear o carregamento do React) -->
+    <script defer src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('tarefas_theme_preference');
+          var isDark = saved === 'dark' || (saved === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/tarefas.site/assets/index-Bzyu6uo6.js"></script>
+    <link rel="stylesheet" crossorigin href="/tarefas.site/assets/index-9eY4GTdZ.css">
+  </head>
+  <body class="antialiased">
+    <div id="root">
+      <div style="height:100vh;width:100vw;display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#0f172a;color:#ffffff;font-family:system-ui,-apple-system,sans-serif;">
+        <div style="position:relative;width:64px;height:64px;">
+          <div style="position:absolute;inset:0;border-radius:16px;background:linear-gradient(135deg,#2563eb,#10b981);padding:2px;animation:spin 1s linear infinite;">
+            <div style="width:60px;height:60px;background-color:#0f172a;border-radius:14px;"></div>
+          </div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+        </div>
+        <div style="margin-top:24px;font-weight:600;font-size:18px;letter-spacing:0.05em;">Tarefas.site</div>
+        <div id="loading-status-text" style="margin-top:6px;font-size:14px;color:#94a3b8;">Iniciando plataforma...</div>
+        
+        <div id="loading-fallback-action" style="display:none;margin-top:20px;flex-direction:column;align-items:center;gap:10px;">
+          <p style="font-size:12px;color:#cbd5e1;max-width:280px;text-align:center;">A inicialização está demorando mais que o esperado.</p>
+          <button onclick="window.location.reload()" style="padding:8px 16px;background-color:#3b82f6;color:#ffffff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 6px -1px rgba(0,0,0,0.2);">
+            Recarregar Agora
+          </button>
+        </div>
+      </div>
+      <style>
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      </style>
+    </div>
+    <script type="text/javascript">
+      (function() {
+        try {
+          var variant = localStorage.getItem('tarefas_loading_variant') || 'gradient-spinner';
+          var root = document.getElementById('root');
+          if (root) {
+            var html = '';
+            if (variant === 'gradient-spinner') {
+              html = '<div style="height:100vh;width:100vw;display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#0f172a;color:#ffffff;font-family:system-ui,-apple-system,sans-serif;"><div style="position:relative;width:64px;height:64px;"><div style="position:absolute;inset:0;border-radius:16px;background:linear-gradient(135deg,#2563eb,#10b981);padding:2px;animation:spin 1s linear infinite;"><div style="width:60px;height:60px;background-color:#0f172a;border-radius:14px;"></div></div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div></div><div style="margin-top:24px;font-weight:600;font-size:18px;letter-spacing:0.05em;">Tarefas.site</div><div id="loading-status-text" style="margin-top:6px;font-size:14px;color:#94a3b8;">Iniciando plataforma...</div><div id="loading-fallback-action" style="display:none;margin-top:20px;flex-direction:column;align-items:center;gap:10px;"><p style="font-size:12px;color:#cbd5e1;max-width:280px;text-align:center;">A inicialização está demorando mais que o esperado.</p><button onclick="window.location.reload()" style="padding:8px 16px;background-color:#3b82f6;color:#ffffff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 6px -1px rgba(0,0,0,0.2);">Recarregar Agora</button></div></div>';
+            } else if (variant === 'pulse-logo') {
+              html = '<div style="height:100vh;width:100vw;display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#0f172a;color:#ffffff;font-family:system-ui,-apple-system,sans-serif;"><div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#2563eb,#4f46e5);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px -5px rgba(37,99,235,0.4);animation:bounce 1s infinite;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></div><div style="margin-top:24px;font-weight:700;font-size:18px;background:linear-gradient(90deg,#60a5fa,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Tarefas.site</div><div id="loading-status-text" style="margin-top:6px;font-size:14px;color:#94a3b8;">Iniciando plataforma...</div><div id="loading-fallback-action" style="display:none;margin-top:20px;flex-direction:column;align-items:center;gap:10px;"><p style="font-size:12px;color:#cbd5e1;max-width:280px;text-align:center;">A inicialização está demorando mais que o esperado.</p><button onclick="window.location.reload()" style="padding:8px 16px;background-color:#3b82f6;color:#ffffff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 6px -1px rgba(0,0,0,0.2);">Recarregar Agora</button></div></div>';
+            } else if (variant === 'dots-pulse') {
+              html = '<div style="height:100vh;width:100vw;display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#0f172a;color:#ffffff;font-family:system-ui,-apple-system,sans-serif;"><div style="display:flex;gap:8px;"><div style="width:12px;height:12px;background-color:#3b82f6;border-radius:50%;animation:bounce 1s infinite -0.3s;"></div><div style="width:12px;height:12px;background-color:#6366f1;border-radius:50%;animation:bounce 1s infinite -0.15s;"></div><div style="width:12px;height:12px;background-color:#10b981;border-radius:50%;animation:bounce 1s infinite;"></div></div><div id="loading-status-text" style="margin-top:20px;font-size:14px;color:#cbd5e1;font-weight:500;">Iniciando plataforma...</div><div id="loading-fallback-action" style="display:none;margin-top:20px;flex-direction:column;align-items:center;gap:10px;"><p style="font-size:12px;color:#cbd5e1;max-width:280px;text-align:center;">A inicialização está demorando mais que o esperado.</p><button onclick="window.location.reload()" style="padding:8px 16px;background-color:#3b82f6;color:#ffffff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 6px -1px rgba(0,0,0,0.2);">Recarregar Agora</button></div></div>';
+            } else {
+              html = '<div style="height:100vh;width:100vw;display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#0f172a;color:#ffffff;font-family:system-ui,-apple-system,sans-serif;"><div style="display:flex;align-items:center;gap:12px;background:rgba(30,41,59,0.8);backdrop-filter:blur(12px);padding:16px 24px;border-radius:12px;border:1px solid rgba(51,65,85,0.5);box-shadow:0 20px 25px -5px rgba(0,0,0,0.3);"><div style="width:20px;height:20px;border:2px solid #60a5fa;border-top-color:transparent;border-radius:50%;animation:spin 1s linear infinite;"></div><span id="loading-status-text" style="font-size:14px;font-weight:500;color:#e2e8f0;">Iniciando plataforma...</span></div><div id="loading-fallback-action" style="display:none;margin-top:20px;flex-direction:column;align-items:center;gap:10px;"><p style="font-size:12px;color:#cbd5e1;max-width:280px;text-align:center;">A inicialização está demorando mais que o esperado.</p><button onclick="window.location.reload()" style="padding:8px 16px;background-color:#3b82f6;color:#ffffff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 6px -1px rgba(0,0,0,0.2);">Recarregar Agora</button></div></div>';
+            }
+            root.innerHTML = html + '<style>@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }</style>';
+          }
+        } catch(e) {}
+
+        // Watchdog de resiliência: se o React demorar mais de 6 segundos para montar, ativa opção de recarregamento
+        setTimeout(function() {
+          var fallback = document.getElementById('loading-fallback-action');
+          if (fallback && document.getElementById('loading-status-text')) {
+            fallback.style.display = 'flex';
+          }
+        }, 6000);
+      })();
+    </script>
+  </body>
+</html>
+

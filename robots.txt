@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /login
+Allow: /register
+
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /settings
+Disallow: /wallet
+Disallow: /community
+
+Sitemap: https://tarefas.site/sitemap.xml
